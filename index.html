@@ -9,11 +9,13 @@
 	<!-- This is the script for specifying the custom trigger.  We've replaced 'myCustomTrigger' with 'feedback-button' -->
 
 	<script type='text/javascript'>
-	var descDefault;
+	var descDefault = '';
 	descDefault += '1. What is your question or concern?\n\n';
-
-
-	descDefault += '2. What is the record link where you experienced the problem?';
+	descDefault += '2. What is the record link where you experienced the problem?\n\n';
+	descDefault += '3. What steps can we take to reproduce the problem/bug you are experiencing?\n\n';
+	descDefault += '4. What is the result you are experiencing when you follow these steps?\n\n';
+	descDefault += '5. What is the result you are expecting?\n\n';
+	descDefault += 'Please prvoide a full webbrowser screenshot of this problem/bug.\n\n';
 	
 	var getUrlParameter = function getUrlParameter(sParam) {
 	    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
@@ -41,7 +43,7 @@
 	},
 	// ==== we add the code below to set the field values ====
 	fieldValues: {
-		priority : '1',
+		customfield_10300 : '10200',
 		description: descDefault,
  		fullname : getUrlParameter('fullname'),
 		email : getUrlParameter('email'),
